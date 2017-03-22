@@ -102,7 +102,7 @@ namespace gbc {
             std::vector<size_t> neighs;
             neighs.reserve(3);
 
-            const size_t k = _mesh.getNeighbours(tri, neighs); // these neighbours are obtained through halfedges
+            const size_t k = _mesh.getFaceNeighbours(tri, neighs); // these neighbours are obtained through halfedges
 
             switch (k) {
                 case 1:
