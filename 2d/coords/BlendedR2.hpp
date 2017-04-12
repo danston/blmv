@@ -324,6 +324,9 @@ namespace gbc {
             const double q_0 = _A[2] * invQ;
             const double q_1 = _A[1] * invQ;
 
+            assert(q_0 >= 0.0 && q_0 <= 1.0);
+            assert(q_1 >= 0.0 && q_1 <= 1.0);
+
             const double q0 = smoothStep(q_0);
             const double q1 = smoothStep(q_1);
 
@@ -461,6 +464,10 @@ namespace gbc {
             const double q_0 = _A[2] * invQ;
             const double q_1 = _A[0] * invQ;
             const double q_2 = _A[1] * invQ;
+
+            assert(q_0 >= 0.0 && q_0 <= 1.0);
+            assert(q_1 >= 0.0 && q_1 <= 1.0);
+            assert(q_2 >= 0.0 && q_2 <= 1.0);
 
             const double q0 = smoothStep(q_0);
             const double q1 = smoothStep(q_1);
